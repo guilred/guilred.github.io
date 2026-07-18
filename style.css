@@ -120,18 +120,6 @@ h2 {
     opacity: 1;
 }
 
-/* Mobile */
-@media (max-width: 1100px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 600px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* --- WIP Stack (Vertical, 2 images top, desc bottom) --- */
 .wip-stack {
     display: flex;
@@ -197,7 +185,14 @@ h2 {
     line-height: 1.7;
 }
 
-/* --- Mobile Responsiveness --- */
+/* --- Tablet (<= 1100px) --- */
+@media (max-width: 1100px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --- Mobile / Small Tablet (<= 700px) --- */
 @media (max-width: 700px) {
     .wip-row {
         grid-template-columns: 1fr;
@@ -216,5 +211,97 @@ h2 {
     .wip-content {
         grid-row: 3;
         grid-column: 1;
+    }
+}
+
+/* --- Phone / Small Mobile (<= 480px) --- */
+@media (max-width: 480px) {
+    body {
+        padding: 0 1rem;
+    }
+    .container {
+        max-width: 100%;
+    }
+    
+    /* Navbar */
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1.5rem 0;
+    }
+    nav a {
+        font-size: 0.9rem;
+    }
+    
+    /* Hero */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        margin: 2.5rem 0;
+    }
+    .hero-img {
+        width: 140px;
+        height: 140px;
+        border-radius: 16px;
+    }
+    .hero-text h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.75rem;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+    
+    /* Sections */
+    section {
+        margin-bottom: 3rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.4rem;
+    }
+    
+    /* Grid / Cards */
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .card-img {
+        height: 160px;
+    }
+    .card-content {
+        padding: 1rem;
+    }
+    .card h3 {
+        font-size: 1rem;
+    }
+    .card p {
+        font-size: 0.8rem;
+    }
+    .card-link {
+        font-size: 0.7rem;
+    }
+    
+    /* WIP */
+    .wip-stack {
+        gap: 1.5rem;
+    }
+    .wip-row {
+        padding: 1.25rem;
+        gap: 1.25rem;
+    }
+    .wip-content h3 {
+        font-size: 1.2rem;
+    }
+    .wip-content p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    .wip-tag {
+        font-size: 0.7rem;
+        padding: 0.15rem 0.6rem;
     }
 }
