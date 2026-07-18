@@ -1,1 +1,67 @@
-Hello World! :D
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilred's Portfolio</title>
+    <!-- Linking your new CSS file here! -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <max-container class="container">
+        <!-- Navbar -->
+        <nav>
+            <a href="#">GitHub</a>
+            <a href="#">Twitter/X</a>
+            <a href="#">Itch.io</a>
+            <a href="#">Resume</a>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <img src="profile.png" alt="My Profile Picture" class="hero-img">
+            <div class="hero-text">
+                <h1>Hi, I'm Guilred 👋</h1>
+                <p>I build games, tools, and cool interactive things. Welcome to my corner of the internet. Feel free to explore my finished jam entries or check out the bigger projects I'm currently cooking up below.</p>
+            </div>
+        </header>
+
+        <!-- Finished Projects -->
+        <section>
+            <h2>Completed & Jam Entries</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Game Jam Entry #1</h3>
+                    <p>A quick 48-hour platformer built with Godot. Mostly a prototype but fun mechanics.</p>
+                </div>
+                <div class="card">
+                    <h3>Level Editor Tool</h3>
+                    <p>A small utility tool I built to speed up map creation for my other projects.</p>
+                </div>
+                <div class="card">
+                    <h3>Mini RPG</h3>
+                    <p>Finished RPG from last year. Taught me a lot about state machines.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WIP Projects -->
+        <section>
+            <h2>Works In Progress 🚀</h2>
+            <div class="wip-grid">
+                <div class="wip-card">
+                    <span class="wip-tag">Main Focus</span>
+                    <h3>Project Omega (TBD)</h3>
+                    <p>This is the big one. An ambitious simulation game pushing the limits of the engine. Currently refactoring the core physics loop and adding multiplayer netcode.</p>
+                </div>
+                <div class="wip-card">
+                    <span class="wip-tag">Side Hustle</span>
+                    <h3>Custom Game Engine</h3>
+                    <p>Writing my own renderer in C++ from scratch because I apparently hate free time. Currently getting physically based rendering (PBR) working.</p>
+                </div>
+            </div>
+        </section>
+
+    </max-container>
+</body>
+</html>
