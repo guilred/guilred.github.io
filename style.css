@@ -91,6 +91,7 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    flex: 1;
 }
 .card h3 {
     color: #f8fafc;
@@ -102,6 +103,21 @@ h2 {
     font-size: 0.85rem;
     line-height: 1.5;
     flex-grow: 1;
+}
+.card-link {
+    align-self: flex-start;
+    margin-top: auto;
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.2s, opacity 0.2s;
+    opacity: 0.8;
+}
+.card-link:hover {
+    color: #7dd3fc;
+    opacity: 1;
 }
 
 /* Mobile */
