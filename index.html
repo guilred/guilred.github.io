@@ -43,7 +43,7 @@
             <img src="media/profile.png" alt="My Profile Picture" class="hero-img">
             <div class="hero-text">
                 <h1>Hi, I'm Guilred!</h1>
-                <p>I'm an enthusiastic tool and game developer, I mostly use C# and Monogame. Welcome to my corner of the internet. Feel free to explore my finished projects or check out the bigger projects I'm currently cooking up below.</p>
+                <p>I'm a <span id="age"></span> years old enthusiastic tool and game developer, I mostly use C# and Monogame. Welcome to my corner of the internet. Feel free to explore my finished projects or check out the bigger projects I'm currently cooking up below!</p>
             </div>
         </header>
 
@@ -126,3 +126,13 @@
     </max-container>
 </body>
 </html>
+
+<script>
+    const birthDate = new Date('2006-11-07');
+    const now = new Date();
+    let age = now.getFullYear() - birthDate.getFullYear();
+    const hasHadBirthday = (now.getMonth() > birthDate.getMonth()) ||
+        (now.getMonth() === birthDate.getMonth() && now.getDate() >= birthDate.getDate());
+    if (!hasHadBirthday) age--;
+    document.getElementById('age').textContent = age;
+</script>
