@@ -1,0 +1,14 @@
+.wip-blogs {
+    margin-top: 5rem;
+    text-align: center;
+}
+.wip-blogs-icon {
+    font-size: 3rem;
+    color: #38bdf8;
+    margin-bottom: 1.5rem;
+}
+.wip-blogs-title {
+    border: none;
+    display: block;
+    margin-bottom: 1rem;
+}

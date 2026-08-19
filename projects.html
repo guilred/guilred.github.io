@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guilred's Portfolio</title>
+    <title>Guilred's Portfolio - Blogs</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="media/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -13,8 +13,8 @@
         <!-- Navbar -->
         <nav class="icon-nav">
             <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="projects.html">Projects</a>
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
             </div>
             <div class="social-links">
                 <!-- GitHub -->
@@ -44,27 +44,12 @@
             </div>
         </nav>
 
-        <!-- Dynamic Target Area -->
-        <div id="main-content"></div>
+        <!-- WIP Blogs Section -->
+        <section class="wip-blogs">
+            <i class="fa-solid fa-screwdriver-wrench wip-blogs-icon"></i>
+            <h2 class="wip-blogs-title">Projects deep dives are under construction :)</h2>
+        </section>
 
     </max-container>
-
-    <script>
-        fetch('home.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('main-content').innerHTML = html;
-                const ageEl = document.getElementById('age');
-                if (ageEl) {
-                    const birthDate = new Date('2006-11-07');
-                    const now = new Date();
-                    let age = now.getFullYear() - birthDate.getFullYear();
-                    const hasHadBirthday = (now.getMonth() > birthDate.getMonth()) ||
-                        (now.getMonth() === birthDate.getMonth() && now.getDate() >= birthDate.getDate());
-                    if (!hasHadBirthday) age--;
-                    ageEl.textContent = age;
-                }
-            });
-    </script>
 </body>
 </html>

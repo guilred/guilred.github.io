@@ -1,66 +1,3 @@
-@import url('css/base.css');
-@import url('css/nav.css');
-@import url('css/home.css');
-@import url('css/blogs.css');
-
-/* --- Base & Reset --- */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html {
-    scrollbar-width: thin;
-    scrollbar-color: #334155 #0f172a;
-}
-body {
-    font-family: system-ui, -apple-system, sans-serif;
-    background-color: #0f172a;
-    color: #f8fafc;
-    line-height: 1.6;
-    padding: 0 2rem;
-}
-
-/* Custom Scrollbar for WebKit browsers (Chrome, Safari, Edge) */
-::-webkit-scrollbar {
-    width: 12px;
-}
-::-webkit-scrollbar-track {
-    background: #0f172a;
-}
-::-webkit-scrollbar-thumb {
-    background-color: #334155;
-    border-radius: 6px;
-    border: 3px solid #0f172a;
-}
-::-webkit-scrollbar-thumb:hover {
-    background-color: #38bdf8;
-}
-
-.container { 
-    max-width: 900px; 
-    margin: 0 auto; 
-    display: block; 
-}
-
-/* --- Navbar --- */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 0;
-    border-bottom: 1px solid #1e293b;
-}
-.nav-links, .social-links {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-}
-nav a {
-    color: #38bdf8;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s;
-}
-nav a:hover, nav a.active { color: #7dd3fc; }
-
-/* --- Hero Section (Left Pic, Right Bio) --- */
 .hero {
     display: flex;
     align-items: center;
@@ -78,7 +15,6 @@ nav a:hover, nav a.active { color: #7dd3fc; }
 .hero-text h1 { margin-bottom: 1rem; font-size: 2.5rem; }
 .hero-text p { font-size: 1.1rem; color: #cbd5e1; }
 
-/* --- Sections & Grids --- */
 section { margin-bottom: 5rem; }
 h2 { 
     margin-bottom: 1.5rem; 
@@ -94,7 +30,6 @@ h2 {
     gap: 1.5rem;
 }
 
-/* --- Cards --- */
 .card {
     background: #1e293b;
     border-radius: 16px;
@@ -151,7 +86,6 @@ h2 {
     opacity: 1;
 }
 
-/* --- WIP Stack (Vertical, 2 images top, desc bottom) --- */
 .wip-stack {
     display: flex;
     flex-direction: column;
@@ -216,14 +150,12 @@ h2 {
     line-height: 1.7;
 }
 
-/* --- Tablet (<= 1100px) --- */
 @media (max-width: 1100px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* --- Mobile / Small Tablet (<= 700px) --- */
 @media (max-width: 700px) {
     .wip-row {
         grid-template-columns: 1fr;
@@ -245,30 +177,7 @@ h2 {
     }
 }
 
-/* --- Phone / Small Mobile (<= 480px) --- */
 @media (max-width: 480px) {
-    body {
-        padding: 0 1rem;
-    }
-    .container {
-        max-width: 100%;
-    }
-    
-    /* Navbar */
-    nav {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1.5rem 0;
-    }
-    .nav-links, .social-links {
-        justify-content: center;
-        gap: 1.25rem;
-    }
-    nav a {
-        font-size: 0.9rem;
-    }
-    
-    /* Hero */
     .hero {
         flex-direction: column;
         text-align: center;
@@ -287,8 +196,6 @@ h2 {
     .hero-text p {
         font-size: 1rem;
     }
-    
-    /* Sections */
     section {
         margin-bottom: 3rem;
     }
@@ -297,8 +204,6 @@ h2 {
         margin-bottom: 1rem;
         padding-bottom: 0.4rem;
     }
-    
-    /* Grid / Cards */
     .grid {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -318,8 +223,6 @@ h2 {
     .card-link {
         font-size: 0.7rem;
     }
-    
-    /* WIP */
     .wip-stack {
         gap: 1.5rem;
     }
