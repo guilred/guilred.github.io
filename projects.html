@@ -4,52 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guilred's Portfolio - Blogs</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="media/icon.png">
+    <meta name="description" content="Guilred's project deep dives and blog posts.">
+    <link rel="icon" type="image/png" href="assets/images/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/blogs.css">
 </head>
 <body>
-    <max-container class="container">
-        <!-- Navbar -->
-        <nav class="icon-nav">
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="projects.html" class="active">Projects</a>
-            </div>
-            <div class="social-links">
-                <!-- GitHub -->
-                <a href="https://github.com/guilred" target="_blank" title="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                
-                <!-- YouTube -->
-                <a href="https://www.youtube.com/@Guilred" target="_blank" title="YouTube">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
-                
-                <!-- Discord -->
-                <a href="https://discord.com/users/1470073803274059827" target="_blank" title="Discord">
-                    <i class="fa-brands fa-discord"></i>
-                </a>
-                
-                <!-- Itch.io -->
-                <a href="https://guilred.itch.io/" target="_blank" title="Itch.io">
-                    <i class="fa-brands fa-itch-io"></i>
-                </a>
-                
-                <!-- Twitter/X -->
-                <a href="https://x.com/guilred_" target="_blank" title="Twitter/X">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-            </div>
-        </nav>
+    <div class="container">
 
-        <!-- WIP Blogs Section -->
-        <section class="wip-blogs">
-            <i class="fa-solid fa-screwdriver-wrench wip-blogs-icon"></i>
-            <h2 class="wip-blogs-title">Projects deep dives are under construction :)</h2>
-        </section>
+        <header>
+            <nav class="icon-nav">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="projects.html" class="active">Projects</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/guilred" target="_blank" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@Guilred" target="_blank" title="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://discord.com/users/1470073803274059827" target="_blank" title="Discord">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                    <a href="https://guilred.itch.io/" target="_blank" title="Itch.io">
+                        <i class="fa-brands fa-itch-io"></i>
+                    </a>
+                    <a href="https://x.com/guilred_" target="_blank" title="Twitter/X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </nav>
+        </header>
 
-    </max-container>
+        <main>
+
+            <section class="wip-blogs" aria-labelledby="wip-blogs-title">
+                <i class="fa-solid fa-screwdriver-wrench wip-blogs-icon"></i>
+                <h2 id="wip-blogs-title" class="wip-blogs-title">Projects deep dives are under construction :)</h2>
+            </section>
+
+        </main>
+
+    </div>
 </body>
 </html>

@@ -4,7 +4,7 @@
 }
 .wip-blogs-icon {
     font-size: 3rem;
-    color: #38bdf8;
+    color: var(--color-accent);
     margin-bottom: 1.5rem;
 }
 .wip-blogs-title {
