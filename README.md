@@ -15,16 +15,13 @@ The portfolio site migrated from plain HTML/CSS/JS to React and Vite, deployed t
 .
 ├── .github/workflows/deploy.yml   GitHub Pages deployment
 ├── public/favicon.png             Site icon
-├── scripts/
-│   ├── copy-404.mjs               SPA fallback for GitHub Pages
-│   └── media-metadata-plugin.js   Reads media creation dates
+├── scripts/copy-404.mjs           Creates the SPA fallback for GitHub Pages
 ├── src/
 │   ├── assets/images/             Project, blog, and profile images
-│   ├── assets/diary-videos/       Blog videos
 │   ├── components/                Layout, navbar, hero, cards
 │   │   └── blog/                  BlogCard, BlogPost, PostMedia
 │   ├── content/
-│   │   ├── media.js               Resolves media paths and timestamps
+│   │   ├── media.js               Resolves local image paths
 │   │   └── blogs/                 Blog data and instructions
 │   ├── data/                      Projects, works in progress, social links
 │   ├── hooks/usePageMeta.js       Per-page title and description
@@ -41,8 +38,8 @@ The portfolio site migrated from plain HTML/CSS/JS to React and Vite, deployed t
 ## Blogs
 
 Blogs are data-driven. Each blog is one JS file in `src/content/blogs/`, and each post
-contains text plus optional videos and images. Post dates are derived automatically from
-the earliest timestamp of the linked media; text-only posts can provide an optional date.
+contains text plus optional videos and images. Post dates are typed manually in each
+post, and videos use direct external URLs (for example Internet Archive).
 
 See [`src/content/blogs/README.md`](src/content/blogs/README.md) for:
 
@@ -51,7 +48,7 @@ See [`src/content/blogs/README.md`](src/content/blogs/README.md) for:
 - Referencing videos and images
 - Post anchors and URL structure
 
-The first blog is Croissant with no posts yet. Copy `_TEMPLATE.js` to get started.
+The first blog is Croissant. Copy `_TEMPLATE.js` to get started.
 
 ## Local development
 

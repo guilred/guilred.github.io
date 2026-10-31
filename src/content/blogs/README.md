@@ -4,7 +4,7 @@ All blog content lives in `src/content/blogs/`. Each blog is one JavaScript file
 
 ## Add a new blog
 
-1. Add your videos to `src/assets/diary-videos/<your-blog>/`.
+1. Upload videos to external hosting (for example Internet Archive) and copy their direct URLs.
 2. Add any images to `src/assets/images/` (or a subfolder).
 3. Copy `_TEMPLATE.js` to a new file, for example `my-blog.js`.
 4. Edit `slug`, `title`, `description`, `cover`, and `coverAlt`.
@@ -28,6 +28,7 @@ Add an object to the blog's `posts` array:
 {
   slug: 'visual-warp',
   title: 'Visual Warp',
+  date: '2026-06-08',
   text: [
     'The first paragraph.',
     'The second paragraph.',
@@ -35,7 +36,7 @@ Add an object to the blog's `posts` array:
   media: [
     {
       type: 'video',
-      src: diaryVideo('croissant/Visual Warp.mp4'),
+      src: 'https://archive.org/download/scripting_202610/Visual%20Warp.mp4',
       caption: 'Visual warping in the editor.',
     },
     {
@@ -48,54 +49,59 @@ Add an object to the blog's `posts` array:
 }
 ```
 
+- `date` is required and uses `YYYY-MM-DD`. Posts are sorted newest first.
 - `slug` is optional for posts; it is generated from the title when omitted.
 - `text` can be one string or an array of paragraphs.
 - `media` is optional, and can be one item or an array of items.
 - Each post is rendered at `/blogs/<blog-slug>#<post-slug>`.
 
-## Automatic post dates
+## Post dates
 
-When a post has media, its date is taken automatically from the earliest file
-timestamp (creation or last-modified) among its linked videos/images. If it links
-multiple media files, the earliest one wins. No date field is needed.
-
-For a text-only post, add an optional fallback date:
+Every post has a manually typed date:
 
 ```js
-date: '2026-10-31',
+date: '2026-06-08',
 ```
 
-Posts are sorted newest first using the resolved date. The dev server and production
-build both read media timestamps automatically.
+Dates are never derived from media files or upload metadata, so the dev server,
+production build, and GitHub Pages all show the same date. Posts are sorted newest
+first using this value.
 
 ## Media helpers
 
-Import the helpers at the top of the blog file:
+Only local images need a helper. Import it at the top of the blog file:
 
 ```js
-import { diaryVideo, image } from '../media.js'
+import { image } from '../media.js'
 ```
 
 | Helper | File location | Example |
 | --- | --- | --- |
-| `diaryVideo('...')` | `src/assets/diary-videos/` | `diaryVideo('croissant/Visual Warp.mp4')` |
 | `image('...')` | `src/assets/images/` | `image('complete-projects/worldspin.png')` |
 
-Supported video extensions are `.mp4`, `.webm`, and `.ogg`. Supported image extensions are
-`.png`, `.jpg`, `.jpeg`, `.webp`, `.gif`, and `.avif`.
+Supported image extensions are `.png`, `.jpg`, `.jpeg`, `.webp`, `.gif`, and `.avif`.
+A missing image throws a clear error in the browser during development. Use forward
+slashes in paths.
 
-A missing file throws a clear error in the browser during development. Use forward slashes
-in paths.
+Videos are plain URL strings, so no helper is needed. Use a direct file URL, for
+example an Internet Archive download URL:
+
+```js
+src: 'https://archive.org/download/scripting_202610/Grid%20and%20Placing.mp4'
+```
+
+Spaces in a URL path must be encoded as `%20`. A `+` is not interchangeable in the
+path and can return a 404.
 
 ## Video options
 
-Videos render with `controls`, `preload="metadata"`, and `playsInline`, so the full file is
-only downloaded when the visitor presses play. You can add an optional poster image:
+Videos render with `controls`, `preload="metadata"`, and `playsInline`, so the full file
+is only downloaded when the visitor presses play. You can add an optional poster image:
 
 ```js
 {
   type: 'video',
-  src: diaryVideo('croissant/Visual Warp.mp4'),
+  src: 'https://archive.org/download/scripting_202610/Visual%20Warp.mp4',
   poster: image('path/to/poster.png'),
   caption: 'Optional caption.',
 }

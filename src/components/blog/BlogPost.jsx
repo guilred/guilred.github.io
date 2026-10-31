@@ -1,4 +1,4 @@
-import { formatDate, getPostDate, getPostSlug } from '../../utils/blog.js'
+import { formatDate, getPostSlug } from '../../utils/blog.js'
 import PostMedia from './PostMedia.jsx'
 
 function getParagraphs(text) {
@@ -10,7 +10,7 @@ function getParagraphs(text) {
 
 export default function BlogPost({ post }) {
   const slug = getPostSlug(post)
-  const date = getPostDate(post)
+  const date = post.date ?? ''
   const paragraphs = getParagraphs(post.text)
 
   return (

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
-import { formatDate, getLatestPost, getPostDate } from '../../utils/blog.js'
+import { formatDate, getLatestPost } from '../../utils/blog.js'
 
 export default function BlogCard({ blog }) {
   const latestPost = getLatestPost(blog.posts)
-  const latestDate = latestPost ? getPostDate(latestPost) : ''
+  const latestDate = latestPost?.date ?? ''
   const postCount = blog.posts?.length ?? 0
 
   return (

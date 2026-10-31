@@ -1,4 +1,4 @@
-import { diaryVideo, image } from '../media.js'
+import { image } from '../media.js'
 
 export const croissant = {
   slug: 'croissant',
@@ -11,6 +11,7 @@ export const croissant = {
     {
       slug: 'lorem-ipsum-dolor-sit-amet',
       title: 'Lorem Ipsum Dolor Sit Amet',
+      date: '2026-05-19',
       text: [
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla.',
         'Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper.',
@@ -18,7 +19,7 @@ export const croissant = {
       media: [
         {
           type: 'video',
-          src: diaryVideo('croissant/Grid and Placing.mp4'),
+          src: 'https://archive.org/download/scripting_202610/Grid%20and%20Placing.mp4',
           caption: 'Grid and placing in the Croissant editor.',
         },
       ],

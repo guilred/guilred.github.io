@@ -4,11 +4,11 @@
 //   3. Add posts to the `posts` array (an example is included below).
 //   4. Import and register it in index.js.
 //
-// Media helpers:
-//   diaryVideo('blog-folder/file.mp4') -> src/assets/diary-videos/blog-folder/file.mp4
-//   image('folder/file.png')           -> src/assets/images/folder/file.png
+// Media:
+//   image('folder/file.png') -> src/assets/images/folder/file.png
+//   Videos use a direct URL string, for example an Internet Archive URL.
 
-import { diaryVideo, image } from '../media.js'
+import { image } from '../media.js'
 
 export const myBlog = {
   slug: 'my-blog',
@@ -22,9 +22,8 @@ export const myBlog = {
       // Optional. If omitted, it is generated from the title.
       slug: 'first-post',
       title: 'First Post',
-      // With media, the date is derived automatically from the earliest media
-      // file timestamp. For a text-only post, uncomment a fallback date:
-      // date: '2026-10-31',
+      // Required. Use YYYY-MM-DD. Posts are sorted newest first.
+      date: '2026-10-31',
       // A single string or an array of paragraphs.
       text: [
         'The first paragraph of the post.',
@@ -34,7 +33,8 @@ export const myBlog = {
       media: [
         {
           type: 'video',
-          src: diaryVideo('croissant/Visual Warp.mp4'),
+          // Use a direct video URL. Encode spaces as %20, not +.
+          src: 'https://archive.org/download/scripting_202610/Grid%20and%20Placing.mp4',
           caption: 'Optional caption under the video.',
           // Optional: poster: image('path/to/poster.png'),
         },

@@ -3,7 +3,7 @@ import { Link, useLocation, useParams } from 'react-router-dom'
 import BlogPost from '../components/blog/BlogPost.jsx'
 import { blogs } from '../content/blogs/index.js'
 import usePageMeta from '../hooks/usePageMeta.js'
-import { formatDate, getLatestPost, getPostDate, getPostSlug, sortPosts } from '../utils/blog.js'
+import { formatDate, getLatestPost, getPostSlug, sortPosts } from '../utils/blog.js'
 
 export default function Blog() {
   const { blogSlug } = useParams()
@@ -37,7 +37,7 @@ export default function Blog() {
 
   const posts = sortPosts(blog.posts)
   const latestPost = getLatestPost(blog.posts)
-  const latestDate = latestPost ? getPostDate(latestPost) : ''
+  const latestDate = latestPost?.date ?? ''
 
   return (
     <div className="blog-detail">

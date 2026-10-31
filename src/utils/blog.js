@@ -1,21 +1,3 @@
-import { getMediaDate } from '../content/media.js'
-
-function normalizeMedia(media) {
-  if (!media) return []
-  return Array.isArray(media) ? media : [media]
-}
-
-export function getPostDate(post) {
-  const mediaDates = normalizeMedia(post?.media)
-    .map((item) => getMediaDate(item?.src))
-    .filter(Boolean)
-    .sort()
-
-  if (mediaDates.length > 0) return mediaDates[0]
-
-  return post?.date ?? ''
-}
-
 export function slugify(value) {
   return String(value)
     .toLowerCase()
@@ -29,7 +11,7 @@ export function getPostSlug(post) {
 }
 
 export function sortPosts(posts = []) {
-  return [...posts].sort((a, b) => getPostDate(b).localeCompare(getPostDate(a)))
+  return [...posts].sort((a, b) => String(b.date ?? '').localeCompare(String(a.date ?? '')))
 }
 
 export function getLatestPost(posts = []) {
