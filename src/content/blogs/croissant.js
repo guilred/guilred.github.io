@@ -4,7 +4,7 @@ export const croissant = {
   slug: 'croissant',
   title: 'Croissant',
   description:
-    'Development diary for Croissant, a high-performance, engine-like map editor for building game maps.',
+    'Development diary for Croissant, my game\'s Map Editor',
   cover: image('work-in-progress/croissant.png'),
   coverAlt: 'The Croissant map editor',
   posts: [
@@ -20,7 +20,6 @@ export const croissant = {
         {
           type: 'video',
           src: 'https://archive.org/download/scripting_202610/Grid%20and%20Placing.mp4',
-          caption: 'Grid and placing in the Croissant editor.',
         },
       ],
     },

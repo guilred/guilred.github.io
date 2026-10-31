@@ -193,14 +193,6 @@
     background: var(--color-bg);
 }
 
-.post-media-caption {
-    margin-top: 0.5rem;
-    color: var(--color-text-muted);
-    font-size: 0.8rem;
-    line-height: 1.5;
-    text-align: center;
-}
-
 .blog-missing {
     margin-top: 4rem;
     text-align: center;
@@ -262,9 +254,5 @@
 
     .blog-post-anchor {
         opacity: 1;
-    }
-
-    .post-media-caption {
-        font-size: 0.75rem;
     }
 }

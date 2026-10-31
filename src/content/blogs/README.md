@@ -37,13 +37,11 @@ Add an object to the blog's `posts` array:
     {
       type: 'video',
       src: 'https://archive.org/download/scripting_202610/Visual%20Warp.mp4',
-      caption: 'Visual warping in the editor.',
     },
     {
       type: 'image',
       src: image('work-in-progress/croissant.png'),
       alt: 'The Croissant map editor',
-      caption: 'The map editor.',
     },
   ],
 }
@@ -103,7 +101,6 @@ is only downloaded when the visitor presses play. You can add an optional poster
   type: 'video',
   src: 'https://archive.org/download/scripting_202610/Visual%20Warp.mp4',
   poster: image('path/to/poster.png'),
-  caption: 'Optional caption.',
 }
 ```
 
@@ -116,4 +113,4 @@ import { BlogPost, PostMedia } from '../components/blog/index.js'
 ```
 
 - `BlogPost` renders a complete post, including its anchor ID.
-- `PostMedia` renders a video or image with an optional caption.
+- `PostMedia` renders a video or image. Images use their `alt` text.

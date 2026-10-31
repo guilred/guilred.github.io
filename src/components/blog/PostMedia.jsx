@@ -30,7 +30,7 @@ export default function PostMedia({ media, title }) {
                 controls
                 preload="metadata"
                 playsInline
-                aria-label={item.caption ?? title}
+                aria-label={title}
               >
                 Your browser does not support the video tag.
               </video>
@@ -38,13 +38,9 @@ export default function PostMedia({ media, title }) {
               <img
                 className="post-media-image"
                 src={item.src}
-                alt={item.alt ?? item.caption ?? ''}
+                alt={item.alt ?? ''}
                 loading="lazy"
               />
-            )}
-
-            {item.caption && (
-              <figcaption className="post-media-caption">{item.caption}</figcaption>
             )}
           </figure>
         )

@@ -35,14 +35,12 @@ export const myBlog = {
           type: 'video',
           // Use a direct video URL. Encode spaces as %20, not +.
           src: 'https://archive.org/download/scripting_202610/Grid%20and%20Placing.mp4',
-          caption: 'Optional caption under the video.',
           // Optional: poster: image('path/to/poster.png'),
         },
         {
           type: 'image',
           src: image('complete-projects/worldspin.png'),
           alt: 'WorldSpin screenshot',
-          caption: 'Optional caption under the image.',
         },
       ],
     },
