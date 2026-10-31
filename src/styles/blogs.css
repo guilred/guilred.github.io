@@ -9,6 +9,22 @@
     gap: 1.5rem;
 }
 
+.blog-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.blog-card-link:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+}
+
+.blog-card-link:hover .card-link {
+    color: var(--color-accent-strong);
+    opacity: 1;
+}
+
 .blog-card-img {
     height: 220px;
 }

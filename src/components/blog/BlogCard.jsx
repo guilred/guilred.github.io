@@ -7,7 +7,7 @@ export default function BlogCard({ blog }) {
   const postCount = blog.posts?.length ?? 0
 
   return (
-    <article className="card blog-card">
+    <Link to={`/blogs/${blog.slug}`} className="card blog-card blog-card-link">
       {blog.cover && (
         <img
           src={blog.cover}
@@ -29,10 +29,8 @@ export default function BlogCard({ blog }) {
             </span>
           )}
         </div>
-        <Link to={`/blogs/${blog.slug}`} className="card-link">
-          read blog →
-        </Link>
+        <span className="card-link">read blog →</span>
       </div>
-    </article>
+    </Link>
   )
 }
